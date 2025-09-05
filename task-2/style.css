@@ -1,0 +1,106 @@
+/* reset default css */
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+      background: url(https://images.pexels.com/photos/33467273/pexels-photo-33467273.jpeg);
+      background-size: cover;
+      background-position: center;
+    }
+    .main-div{
+      width:100%;
+      max-width: 500px;
+      padding:25px;
+      border-radius: 5px;
+      box-shadow: 0 0 30 rgba(0, 0, 0, 0.8);
+      /* background-color: #7D5644; */
+      backdrop-filter: blur(10px);
+      border: 3px solid rgba(255,255,255,0.5);
+    }
+    .main-div h2{
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffff;
+    }
+    .form-class{
+      margin-bottom: 25px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label{
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #ffff;
+    }
+    /* making changes on both inputs and textarea as well */
+    .form-group input,
+    .form-group textarea{
+      padding: 12px;
+      width: 100%;
+      font-size: 15px;
+      border: 1px solid #F7D675;
+      outline: none;
+      border-radius: 6px;
+      transition: border 0.3 ease;
+    }
+    /* add color around border when user enter data */
+    .form-group input:focus,
+    .form-group textarea:focus{
+      border-color: #F7D675 ;
+    }
+    .form-group textarea{
+      resize:none;
+      height: 120px;
+    }
+    .button-class{
+      font-size: 15px;
+      font-weight: bold;
+      padding: 12px;
+      width: 100%;
+      background-color: #ffffff5e;
+      color: #ffff;
+      border: none;
+      border-radius: 6px;
+      transition: background 0.3 ease;
+    }
+    .button-class:hover{
+      background: #adc5cb68;
+    }
+    .error{
+        font-size: 14px;
+        color:red;
+        margin-top: 5px;
+      }
+    .success{
+        font-size: 25px;
+        color:green;
+        text-align: center;
+        margin-top: 10px;
+      }
+    @media(max-width:500px){
+      .main-div{
+        padding: 20px;
+      }
+      .error{
+        font-size: 14px;
+        color:red;
+        margin-top: 5px;
+      }
+      .success{
+        font-size: 15px;
+        color:green;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+

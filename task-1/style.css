@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C3AC97;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Sidebar */
+.sidebar-class {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    background: #102426;
+    color: #C3AC97;
+    height: 100%;
+    width: clamp(150px,25vw,240px);
+    z-index: 999; /* ensure it's above content */
+}
+
+.sidebar-class.closed {
+    transform: translateX(-100%);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.links {
+    padding: 15px 0;
+    list-style: none;
+    flex: 1;
+}
+
+.links li {
+    margin: 12px 0;
+}
+
+.links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    color: #C3AC97;
+}
+
+.links a:hover {
+    background: #515659;
+    border-radius: 6px;
+}
+
+.links i {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+/* Toggle button */
+.button-class {
+    position: fixed;
+    font-size: 18px;
+    cursor: pointer;
+    background: #102426;
+    color: #C3AC97;
+    top: 15px;
+    left: 15px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    z-index: 1001; /* higher than sidebar */
+}
+
+.button-class:hover {
+    background: #515659;
+}
+
+/* Page content */
+.content {
+    margin-left: clamp(150px,25vw,240px);
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-class.closed ~ .content {
+    margin-left: 0;
+}
+
+/* Responsive: make sidebar overlay */
+@media (max-width: 400px) {
+    .sidebar-class {
+        width: clamp(150px,70vw,240px);
+        transform: translateX(-100%); /* start hidden */
+    }
+    .sidebar-class.closed {
+        transform: translateX(-100%);
+    }
+    .sidebar-class:not(.closed) {
+        transform: translateX(0); /* slide in from left */
+    }
+    .content {
+        margin-left: 0; /* always full width */
+    }
+} 
+ 
+
+    

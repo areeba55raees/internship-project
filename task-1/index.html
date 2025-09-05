@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1 Collapsable SideBar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+        <button class="button-class" id="button-id">
+        <i class="fas fa-bars"></i></button>
+    <div class="sidebar-class" id="sidebar-id">
+        <div class="logo">My Logo</div>
+        <ul class="links">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i>Login/Create Account</a></li>
+        </ul>
+    </div>
+        <div class="content">
+         <br><br>   
+        <h2>Welcome to Collapsable SideBaar</h2>
+        <p>In order to see sidebar click on button given at the top of page </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non incidunt, quos, vitae ullam ea tempora quidem iure, fuga fugit placeat ipsa esse velit commodi.
+        </p>
+    </div>
+    <script>
+        let button=document.getElementById("button-id")
+        let sidebar=document.getElementById("sidebar-id")
+        button.addEventListener("click", ()=>{
+            sidebar.classList.toggle("closed");
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
